@@ -7,7 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MarzipanoComponent } from './components/marzipano/marzipano.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MainComponent } from './components/main/main.component';
+import { MainComponent } from './components/home/main.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 
 

@@ -1,10 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @font-face {
-    font-family: "Poppins";
-    src: local("Poppins"), url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+    font-family: "Poppins-regular";
+    src: local("Poppins-regular"), url(./assets/fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Poppins-bold";
+    src: local("Poppins-bold"), url(./assets/fonts/Poppins-Bold.ttf) format("truetype");
 }
 
 @font-face {
     font-family: "Poppins-black";
     src: local("Poppins-black"), url(./assets/fonts/Poppins-Black.ttf) format("truetype");
+}
+
+
+.text-title-area{
+    font-family: "Poppins-black";
+}
+
+.text-any{
+    font-family: "Poppins-regular";
+}
+
+.text-title{
+    font-family: "Poppins-bold";
 }
