@@ -7,8 +7,12 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MarzipanoComponent } from './components/marzipano/marzipano.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MainComponent } from './components/home/main.component';
+import { HomeComponent } from './components/home/home.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { InformaticaComponent } from './components/sections/informatica/informatica.component';
+import { HidrologiaComponent } from './components/sections/hidrologia/hidrologia.component';
+import { AmbientalComponent } from './components/sections/ambiental/ambiental.component';
+import { AgrimensuraComponent } from './components/sections/agrimensura/agrimensura.component';
 
 
 @NgModule({
@@ -17,8 +21,12 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     HeaderComponent,
     FooterComponent,
     MarzipanoComponent,
-    MainComponent,
-    CarouselComponent
+    HomeComponent,
+    CarouselComponent,
+    InformaticaComponent,
+    HidrologiaComponent,
+    AmbientalComponent,
+    AgrimensuraComponent
   ],
   imports: [
     BrowserModule,
