@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { MarzipanoComponent } from './components/marzipano/marzipano.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './components/home/home.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
@@ -20,7 +19,6 @@ import { AgrimensuraComponent } from './components/sections/agrimensura/agrimens
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    MarzipanoComponent,
     HomeComponent,
     CarouselComponent,
     InformaticaComponent,

@@ -1,1 +1,34 @@
-<p>hidrologia works!</p>
+<div class="container" *ngIf="activitySelected == null">
+    <div class="col-12">
+        <div style="width:100%; height: 640px;  background-color: darkgray;">
+        vista 360</div>
+    </div>
+
+    <div class="buttons">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <div *ngFor="let item of hidrica">
+                <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="activitySelected != null" class="col-12" style="padding: 0px;">
+    <div style="background-color:#2395E2; height: 150px;">
+        <div class="activity" style="color: white;">
+            <h3 class="text-title-area">{{activitySelected?.nombre}}</h3>
+            <h4 class="text-center">Recursos Hídricos</h4>
+        </div>
+    </div>
+    <br/>
+
+    <div class="row">
+        <div *ngIf="activitySelected?.texto1 != null">
+            <p> {{activitySelected?.texto1}}</p>
+        </div>
+        <div *ngIf="activitySelected?.texto2 != null">
+            <p> {{activitySelected?.texto2}}</p>
+        </div>
+    </div>
+
+</div>
