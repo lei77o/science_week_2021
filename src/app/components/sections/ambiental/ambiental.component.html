@@ -7,7 +7,7 @@
 <div class="buttons">
 <div class="btn-group" role="group" aria-label="Basic example">
     <div *ngFor="let item of ambiental">
-        <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+        <button type="button" class="btn btn-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
     </div>
   </div>
 </div>
@@ -30,6 +30,9 @@
             <p> {{activitySelected?.texto2}}</p>
         </div>
     </div>
-
-
 </div>
+<div *ngIf="activitySelected?.url != null">
+    <div class="col-12 text-center">
+         <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div> 

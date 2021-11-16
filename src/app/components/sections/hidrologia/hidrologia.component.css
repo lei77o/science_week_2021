@@ -1,7 +1,10 @@
 .buttons{
     text-align: center;
 }
-
+.btn{
+    margin-left:5px; 
+    margin-right:5px;
+}
 .activity{
     position: relative;
     float: left;

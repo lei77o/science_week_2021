@@ -4,7 +4,7 @@
         <div style="width:100%; height: 640px;  background-color: darkgray;">
         vista 360</div>
     </div>
-
+<br>
 <div class="buttons">
     <div class="btn-group" role="group" aria-label="Basic example">
         <div *ngFor="let item of agrimensura">
@@ -31,6 +31,18 @@
         </div>
     </div>
 
-
-
+    <div *ngIf="activitySelected?.img != null;" class="text-center">      
+        <div *ngFor="let img of activitySelected?.img;  let i = index;" style="margin: 10px;">
+                <img [src]="img" style="width: 50%;">      
+        </div>
+    </div>
+    <br>
+    <div *ngIf="activitySelected?.url != null">
+        <div class="col-12 text-center">
+             <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div> 
 </div>
+
+<br>
+<br>

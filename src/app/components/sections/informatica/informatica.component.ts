@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { actividad } from 'src/app/models/actividad.model';
 
 @Component({
@@ -10,8 +11,10 @@ export class InformaticaComponent implements OnInit {
 
   informatica: actividad[]=[];
   activitySelected?: actividad;
+  url: string = "";
+  urlSafe: SafeResourceUrl = "";
 
-  constructor() {
+  constructor(public sanitizer: DomSanitizer) {
    }
 
   ngOnInit(): void {
@@ -26,6 +29,9 @@ export class InformaticaComponent implements OnInit {
 
   selectedActivity(event: actividad){
     this.activitySelected = event;
+    if(this.activitySelected.url != null){
+      this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.url);
+    }
   }
 
 }

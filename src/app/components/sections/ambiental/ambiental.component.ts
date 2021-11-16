@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { actividad } from 'src/app/models/actividad.model';
 import { ActividadesService} from '../../../services/actividades.service'
 
@@ -11,8 +12,10 @@ export class AmbientalComponent implements OnInit {
 
   ambiental: actividad [] = [];
   activitySelected?: actividad;
+  url: string = "";
+  urlSafe: SafeResourceUrl = "";
 
-  constructor() { }
+  constructor(public sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
 
@@ -53,7 +56,9 @@ export class AmbientalComponent implements OnInit {
 
   selectedActivity(event: actividad){
     this.activitySelected = event;
-    console.log(this.activitySelected);
+    if(this.activitySelected.url != null){
+      this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.url);
+    }
   }
 
 

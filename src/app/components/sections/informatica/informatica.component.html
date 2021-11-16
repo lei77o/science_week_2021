@@ -31,4 +31,10 @@
         </div>
     </div>
 
+    <div *ngIf="activitySelected?.url != null">
+        <div class="col-12 text-center">
+             <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div> 
+
 </div>
