@@ -14,6 +14,7 @@ export class InformaticaComponent implements OnInit {
   url: string = "";
   urlSafe: SafeResourceUrl = "";
   videoUrl: SafeResourceUrl = "";
+  jugar: boolean = false;
 
   constructor(public sanitizer: DomSanitizer) {
    }
@@ -43,5 +44,12 @@ export class InformaticaComponent implements OnInit {
       this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.videoUrl);
     }
   } 
+
+  play(){
+    if(this.jugar){
+      this.jugar = false;
+    }
+    else{ this.jugar = true;}
+  }
 
 }
