@@ -25,7 +25,7 @@ export class AmbientalComponent implements OnInit {
       nombre: "Vivir sin árboles",
       texto1: "La deforestación es una problemática ambiental muy preocupante porque deja al suelo desprovisto de la capa protectora de la vegetación, lo que acarrea diversos problemas para el medio natural y social. Aquí les proponemos comparar y analizar los procesos físicos que ocurren cuando cae agua de lluvia sobre un suelo con vegetación y otro suelo sin vegetación.",
       texto2: "Impacto de la deforestación en el proceso de infiltración de agua de lluvia.",
-      videoUrl: "https://www.youtube.com/embed/NNXA_deQdZ4",
+      videoUrl: "https://www.youtube.com/embed/LIFmUBAC50w",
     });
     this.images.push("./assets/images/ambiental/colores.png");
     this.ambiental.push(  {
@@ -50,17 +50,19 @@ export class AmbientalComponent implements OnInit {
       nombre: "¡No se puede respirar!", 
       texto1: "En esta actividad se propone mostrar y pensar el efecto de la contaminación atmosférica en la calidad del agua de lluvia, mediante una experiencia sencilla que puede realizarse con elementos disponibles en sus hogares."   ,
       texto2: "Los procesos que implican combustión, tanto en industrias como en automóviles y calefacciones residenciales, generan emisiones de diferentes sustancias que contaminan la atmósfera. Estas emisiones de partículas y gases al entrar en contacto con el agua de lluvia, generan la conocida lluvia ácida.",
-      videoUrl: "https://www.youtube.com/embed/3lEq9UF3C5U",
+      videoUrl: "https://www.youtube.com/embed/sGH6ZTMrkzs",
     });
     this.ambiental.push({
       nombre: "Limpiemos el agua",
       texto1: "Las actividades humanas causan diversos problemas ambientales, entre ellos la degradación de la calidad del agua debido a los efluentes contaminados que llegan a los ríos, lagos, arroyos y océanos. En esta actividad se propone mostrar un ejemplo práctico de tratamiento de agua contaminada.",
       texto2: "En la experiencia, el agua se encuentra contaminada con un colorante y luego es tratada mediante la introducción de carbón activado, un compuesto absorbente que se utiliza en las plantas de tratamiento de efluentes.",
+      videoUrl: "https://www.youtube.com/embed/IqTuG3NmyuM",
     });
     this.ambiental.push( {
-      nombre: "SOS aguas calientes",
+      nombre: "S.O.S aguas calientes",
       texto1: "En esta actividad les proponemos observar qué ocurre cuando mezclamos aguas a diferentes temperaturas, simulando lo que ocurre cuando se vierten efluentes a distintos cuerpos de agua, como por ejemplo los ríos.",
-      texto2: "El agua (o los efluentes) a temperatura más caliente flota, generando una capa superficial menos aireada, ya que a mayor temperatura el oxígeno tiene menor capacidad de disolución en agua, afectando la vida en el interior de dicho cuerpo de agua."
+      texto2: "El agua (o los efluentes) a temperatura más caliente flota, generando una capa superficial menos aireada, ya que a mayor temperatura el oxígeno tiene menor capacidad de disolución en agua, afectando la vida en el interior de dicho cuerpo de agua.",
+      videoUrl:"https://www.youtube.com/embed/vtKqOcvkZYI"
     });
     this.ambiental.push( {
       nombre: "Crucigrama ambiental",

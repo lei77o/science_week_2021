@@ -10,6 +10,7 @@
 .recorrido{
     width: 1024px;
     height: 640px;
+    
 }
 
 @media screen and (max-width: 600px) { 
