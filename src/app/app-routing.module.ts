@@ -11,6 +11,7 @@ const routes: Routes = [
   { path: 'hidricas', component: HidrologiaComponent},
   { path: 'informatica', component: InformaticaComponent},
   { path: 'ambiental', component: AmbientalComponent},
+  { path: 'home', component: HomeComponent},
   { path: '**', component: HomeComponent},
 ];
 
