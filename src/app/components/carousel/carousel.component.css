@@ -1,3 +1,29 @@
 .button-shadow{
     box-shadow: 2px 2px 2px #9E9E9E;
 }
+.text{
+    font-family: Poppins-regular;
+
+}
+.text-title-area{
+    min-height: 3rem;
+}
+
+@media screen and (max-width: 640px) and (orientation : landscape){
+    .text{
+        font-size: 12px;        
+    }
+    .button-shadow{
+        font-size: 10px;
+    }
+    .col-sm-3{
+        padding: 5px;
+    }
+    .text-title-area{
+        min-height: 3rem;
+    }
+    .col-sm-3{
+        padding: 0px;
+    }
+    
+}

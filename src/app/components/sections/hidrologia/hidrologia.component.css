@@ -44,6 +44,22 @@
     }
 }
 
+@media screen and (max-width: 640px) and (orientation : landscape){
+    .recorrido { 
+        width: 510px;
+        height: 320px;
+    }
+    .videos{
+        width: 510px;
+        height: 320px;
+        padding: 0px;
+    }  
+    .actividad{
+        width: 510px;
+        height: 320px;
+    }
+}
+
 .btn:hover{
     transition: all .25s ease-in-out;
     transform: scale(1.1);
