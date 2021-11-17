@@ -7,6 +7,7 @@
 }
 .text-title-area{
     min-height: 3rem;
+    color: #434343
 }
 
 @media screen and (max-width: 640px) and (orientation : landscape){
