@@ -1,14 +1,15 @@
 <div class="container text-center" *ngIf="activitySelected == null" style="padding: 0px;">   
     <embed src="https://sinc.unl.edu.ar/recorrido/recursos_hidricos/app-files/index.html" class="recorrido">
     <div class="buttons">
+        <br>
         <div class="btn-group" role="group" aria-label="Basic example">
             <div *ngFor="let item of hidrica">
-                <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+                <a class="btn btn-primary button-shadow" style="background: #2395E2; border: none;" (click)="selectedActivity(item)">{{item.nombre}}</a>
             </div>
         </div>
     </div>
 </div>
-
+<br>
 <div *ngIf="activitySelected != null" class="col-12" style="padding: 0px;">
     <div style="background-color:#2395E2; height: 150px;">
         <div class="activity" style="color: white;">

@@ -1,14 +1,15 @@
 <div class="col-12 text-center" *ngIf="activitySelected == null" style="padding: 0px; margin: 0px;">
     <embed src="https://sinc.unl.edu.ar/recorrido/informatica/app-files/index.html" class="recorrido">
 <div class="buttons">
+    <br>
         <div class="btn-group" role="group" aria-label="Basic example">
             <div *ngFor="let item of informatica">
-                <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+                <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="selectedActivity(item)">{{item.nombre}}</a>
             </div>
         </div>
     </div>
 </div>
-
+<br>
 <div *ngIf="activitySelected != null" class="col-12" style="padding: 0px;">
     <div style="background-color:#C844E0; height: 150px;">
         <div class="activity" style="color: white;">

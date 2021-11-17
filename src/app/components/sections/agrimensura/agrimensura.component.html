@@ -3,14 +3,15 @@
     <embed src="https://sinc.unl.edu.ar/recorrido/medio_ambiente/app-files/index.html" class="recorrido">
 <br>
 <div class="buttons">
+    <br>
     <div class="btn-group" role="group" aria-label="Basic example">
         <div *ngFor="let item of agrimensura">
-            <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+            <a class="btn btn-primary button-shadow" style="background: #F1C40F; border: none;" (click)="selectedActivity(item)">{{item.nombre}}</a>
         </div>
     </div>
     </div>
 </div>
-
+<br>
 <div *ngIf="activitySelected != null" class="col-12" style="padding: 0px;">
     <div style="background-color:#FFC501; height: 150px;">
         <div class="activity" style="color: white;">

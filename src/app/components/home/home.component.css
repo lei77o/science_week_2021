@@ -18,3 +18,7 @@
         height: 213px;
     }
 }
+
+.button-shadow{
+    box-shadow: 2px 2px 2px #9E9E9E;
+}
