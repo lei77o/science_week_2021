@@ -17,6 +17,7 @@ export class InformaticaComponent implements OnInit {
   videoUrl: SafeResourceUrl = "";
   jugar: boolean = false;
   pdfUrl: SafeResourceUrl= "";
+  safeUrl: SafeResourceUrl="";
 
   constructor(public sanitizer: DomSanitizer, private router: Router) {
    }
@@ -48,6 +49,7 @@ export class InformaticaComponent implements OnInit {
     if (this.activitySelected.pdf != null){
       this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.pdf);
     }
+    console.log(this.activitySelected.nombre);
   } 
 
   play(){
@@ -58,7 +60,8 @@ export class InformaticaComponent implements OnInit {
   }
 
   navigate(){
-    this.router.navigateByUrl('https://sinc.unl.edu.ar/recorrido/app-gerard/index.html');
+    this.safeUrl = this.sanitizer.bypassSecurityTrustResourceUrl('https://sinc.unl.edu.ar/recorrido/app-gerard/index.html');
+    //this.router.navigateByUrl(this.safeUrl);
   }
 
 }

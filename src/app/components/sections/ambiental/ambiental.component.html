@@ -26,7 +26,7 @@
         </div>
     </div>
     <br/>
-
+    <br/>
     <div *ngIf="activitySelected?.videoUrl != null">
         <div class="col-12 text-center" style="padding:0px;">
              <iframe [src]="videoUrl" class="videos" frameborder="0" allowfullscreen></iframe>
@@ -46,6 +46,7 @@
             <h4 class="text-title-area" style="color:#00ACC1;">{{activitySelected?.titulo1}}</h4>
             <p> {{activitySelected?.texto1}}</p>
         </div>
+        <br/>
         <div *ngIf="activitySelected?.texto2 != null">
             <h4 class="text-title-area" style="color:#434343;">Objetivos</h4>
             <p> {{activitySelected?.texto2}}</p>

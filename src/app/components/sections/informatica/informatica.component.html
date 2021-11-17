@@ -29,7 +29,7 @@
             </div>
         </div>
         <br/>
-
+        <br/>
         <div *ngIf="activitySelected?.videoUrl != null">
             <div class="col-12 text-center" style="padding: 0px;">
                 <iframe [src]="videoUrl" class="videos" frameborder="0" allowfullscreen></iframe>
@@ -42,6 +42,7 @@
                 <h4 class="text-title-area" style="color:#C844E0;">{{activitySelected?.titulo1}}</h4>
                 <p> {{activitySelected?.texto1}}</p>
             </div>
+            <br/>
             <div *ngIf="activitySelected?.texto2 != null">
                 <h4 class="text-title-area" style="color:#434343;">Objetivos</h4>
                 <p> {{activitySelected?.texto2}}</p>
@@ -54,18 +55,16 @@
             </div>
         </div> 
         <div class="text-center" *ngIf="activitySelected?.nombre === 'Alumna ejemplar'">
-            <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="navigate()">A Jugar...</a>
+            <a href="https://sinc.unl.edu.ar/recorrido/app-gerard/index.html" class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" target="_blank">A Jugar...</a>
         </div>
     </div>
 </div>
-<div class="container text-center app-redes" *ngIf="jugar">
-        <br>
-        <div style="border: 1px solid gray;">
-            <app-recon></app-recon>
-        </div>
-        <div class="text-center" *ngIf="activitySelected?.nombre === 'Alumna ejemplar'">
-            <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="navigate()">Volver...</a>
-        </div>
+<div *ngIf="activitySelected?.nombre === '¡A mover el esqueleto!'">
+    <br>
+    <br>
+    <div style="text-align: justify;">
+        <app-recon></app-recon>
+    </div>
 </div>
 <br>
 <div  *ngIf="activitySelected?.pdf != null" class="text-center">
@@ -74,5 +73,8 @@
     <br>
     <iframe [src]="pdfUrl" width="860" height="640" type="application/pdf"></iframe>        
 </div>
+
+
+
 
 

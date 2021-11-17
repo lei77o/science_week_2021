@@ -46,7 +46,7 @@ export class AmbientalComponent implements OnInit {
       titulo1:"¿Qué es un horno solar?",
       texto1: "El horno solar es un artefacto doméstico que funciona con energía solar, su característica principal es que permite cocinar los alimentos a temperaturas más bajas que por métodos convencionales, lo cual tiene efectos beneficiosos en el sabor y en la calidad nutricional de las preparaciones. Además, no requiere el uso de elementos combustibles para generar el calor necesarios para la cocción.",
       texto2:"La energía solar es una de las fuentes de energía renovables más versátil porque sirve para generar energía eléctrica, climatizar ambientes interiores, calentar agua, cocinar alimentos, etc. En esta experiencia les proponemos construir un horno solar, con materiales económicos, para aprovechar la energía del sol para hacer unos ricos bombones de chocolate.",
-      pdf: "https://drive.google.com/file/d/1WocJ-oX1ctTK0ahqALHkx_CF8NLAIuOo/preview",
+      pdf: "https://drive.google.com/file/d/1hyQjRKMkHsVeVbVp6OxckMgKXlN6dCfN/preview",
       img: this.images
     });
     this.ambiental.push({
