@@ -14,7 +14,7 @@
         <div class="activity text-center" style="color: white;">
             <h3 class="text-title-area">{{activitySelected?.nombre}}</h3>
             <h4 class="text-center">Ambiental</h4>
-            <a href="ambiental" style="color: #34495E;" class="text-any"><i class="fa fa-undo"></i> Voler a las actividades...</a>
+            <a href="ambiental" style="color: #00ACC1;" class="text-any"><i class="fa fa-undo"></i> Volver a las actividades...</a>
         </div>
     </div>
     <br/>
@@ -27,11 +27,13 @@
 
     <br>
 
-    <div class="col-12 text-any">
+    <div class="col-12 text-any text-center" style="padding-right: 2rem; padding-left: 2rem;">
         <div *ngIf="activitySelected?.texto1 != null">
+            <h4 class="text-title-area" style="color:#00ACC1;">{{activitySelected?.titulo1}}</h4>
             <p> {{activitySelected?.texto1}}</p>
         </div>
         <div *ngIf="activitySelected?.texto2 != null">
+            <h4 class="text-title-area" style="color:#00ACC1;">Objetivos</h4>
             <p> {{activitySelected?.texto2}}</p>
         </div>
     </div>
