@@ -12,6 +12,22 @@
     height: 640px;
 }
 
+@media screen and (max-width: 360px){
+    .recorrido { 
+        width: 340px;
+        height: 213px;
+    }
+    .videos{
+        width: 350px;
+        height: 250px;
+        padding: 0px;
+    }  
+    .actividad{
+        width: 340px;
+        height: 213px;
+    }
+}
+
 @media screen and (max-width: 640px) and (orientation : landscape){
     .recorrido { 
         width: 510px;
