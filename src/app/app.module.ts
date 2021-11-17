@@ -13,6 +13,7 @@ import { HidrologiaComponent } from './components/sections/hidrologia/hidrologia
 import { AmbientalComponent } from './components/sections/ambiental/ambiental.component';
 import { AgrimensuraComponent } from './components/sections/agrimensura/agrimensura.component';
 import { AppReconComponent } from './components/sections/informatica/app-recon/app-recon.component';
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { AppReconComponent } from './components/sections/informatica/app-recon/a
     BrowserModule,
     AppRoutingModule,
     NgbModule,
+    PdfViewerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

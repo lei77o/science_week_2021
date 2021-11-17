@@ -1,5 +1,15 @@
 
+
+
+
 <div class="container text-center" *ngIf="activitySelected == null" style="padding:0px;">
+    <br>
+    <div style="background-color:#FFC501; height: 150px;">
+        <div class="activity text-center" style="color: white;">
+            <h4 class="text-title-areatext-center" style="margin-bottom:15px;">Cartografía y Agrimensura</h4>        
+        </div>
+    </div>
+    <br>
     <embed src="https://sinc.unl.edu.ar/recorrido/medio_ambiente/app-files/index.html" class="recorrido">
 <br>
 <div class="buttons">
@@ -56,4 +66,9 @@
     </div> 
 </div>
 <br>
-<br>
+<div  *ngIf="activitySelected?.pdf != null" class="text-center">
+    <br>
+    <h4 class="text-title" style="color:#434343;">Instrucciones</h4>
+    <br>
+    <iframe [src]="pdfUrl" width="860" height="640" type="application/pdf"></iframe>        
+</div>

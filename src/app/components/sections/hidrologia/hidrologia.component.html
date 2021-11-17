@@ -1,4 +1,12 @@
-<div class="container text-center" *ngIf="activitySelected == null" style="padding: 0px;">   
+<div class="container text-center" *ngIf="activitySelected == null" style="padding: 0px;">
+    <br>
+    <div style="background-color:#2395E2; height: 150px;">
+        <div class="activity text-center" style="color: white;">
+            <h4 class="text-title-areatext-center" style="margin-bottom:15px;">Recursos Hídricos</h4>        
+        </div>
+    </div>
+    <br>
+
     <embed src="https://sinc.unl.edu.ar/recorrido/recursos_hidricos/app-files/index.html" class="recorrido">
     <div class="buttons">
         <br>
@@ -44,3 +52,10 @@
          <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>
     </div>
 </div> 
+<br>
+<div  *ngIf="activitySelected?.pdf != null" class="text-center">
+    <br>
+    <h4 class="text-title" style="color:#434343;">Instrucciones</h4>
+    <br>
+    <iframe [src]="pdfUrl" width="860" height="640" type="application/pdf"></iframe>        
+</div>

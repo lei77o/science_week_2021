@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 import { actividad } from 'src/app/models/actividad.model';
 
 @Component({
@@ -15,8 +16,9 @@ export class InformaticaComponent implements OnInit {
   urlSafe: SafeResourceUrl = "";
   videoUrl: SafeResourceUrl = "";
   jugar: boolean = false;
+  pdfUrl: SafeResourceUrl= "";
 
-  constructor(public sanitizer: DomSanitizer) {
+  constructor(public sanitizer: DomSanitizer, private router: Router) {
    }
 
   ngOnInit(): void {
@@ -25,7 +27,7 @@ export class InformaticaComponent implements OnInit {
       titulo1:"¿Qué es la realidad aumentada?",
       texto1:"La realidad aumentada es un tipo de tecnología que superpone imágenes virtuales sobre una imagen de la realidad obtenida a través de una pantalla. Uno de los ejemplos más conocidos de realidad aumentada es el juego Pokemon GO. Este juego dio a conocer la tecnología de la Realidad Aumentada a nivel mundial.",
       texto2:"En esta actividad te proponemos ubicar en el lugar correcto los diferentes huesos que componen el cuerpo humano. Para ello, dispones de un conjunto de tarjetas con los nombres de cada hueso, que puedes descargar e imprimir. Al colocar cada tarjeta delante de la cámara del dispositivo, la aplicación las reconocerá y proyectará en la pantalla un modelo 3D de esos huesos mediante realidad aumentada.",
-
+      pdf:"https://drive.google.com/file/d/13Z00WifUCcfGHaLjLLxLWtr6zetcVpZX/preview",
     })
     this.informatica.push({
       nombre: "Alumna ejemplar",
@@ -43,6 +45,9 @@ export class InformaticaComponent implements OnInit {
     if (this.activitySelected.videoUrl != null){
       this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.videoUrl);
     }
+    if (this.activitySelected.pdf != null){
+      this.pdfUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.pdf);
+    }
   } 
 
   play(){
@@ -50,6 +55,10 @@ export class InformaticaComponent implements OnInit {
       this.jugar = false;
     }
     else{ this.jugar = true;}
+  }
+
+  navigate(){
+    this.router.navigateByUrl('https://sinc.unl.edu.ar/recorrido/app-gerard/index.html');
   }
 
 }

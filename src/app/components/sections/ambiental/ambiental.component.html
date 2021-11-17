@@ -1,4 +1,12 @@
 <div class="container text-center" *ngIf="activitySelected == null" style="padding: 0px;">
+        <br>
+        <div style="background-color:#00ACC1; height: 150px;">
+            <div class="activity text-center" style="color: white;">
+                <h4 class="text-title-areatext-center" style="margin-bottom:15px;">Medio Ambiente</h4>        
+            </div>
+        </div>
+        <br>
+
         <embed src="https://sinc.unl.edu.ar/recorrido/medio_ambiente/app-files/index.html" class="recorrido">
       <div class="buttons">
         <br>
@@ -13,7 +21,7 @@
     <div style="background-color:#6ADECB; height: 150px;">
         <div class="activity text-center" style="color: white;">
             <h3 class="text-title-area">{{activitySelected?.nombre}}</h3>
-            <h4 class="text-center" style="margin-bottom:15px;">Ambiental</h4>
+            <h4 class="text-center" style="margin-bottom:15px;">Medio Ambiente</h4>
             <a href="ambiental" style="color: white;" class="text-any"><i class="fa fa-undo"></i> Volver a las actividades...</a>
         </div>
     </div>
@@ -50,4 +58,8 @@
     <div class="col-12 text-center">
          <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>
     </div>
-</div> 
+</div>
+<div  *ngIf="activitySelected?.pdf != null" class="text-center">
+    <h4 class="text-title" style="color:#434343;">Instrucciones</h4>
+    <iframe [src]="pdfUrl" width="860" height="640" type="application/pdf"></iframe>        
+</div>

@@ -1,15 +1,23 @@
 <div class="col-12 text-center" *ngIf="activitySelected == null" style="padding: 0px; margin: 0px;">
-    <embed src="https://sinc.unl.edu.ar/recorrido/informatica/app-files/index.html" class="recorrido">
-<div class="buttons">
     <br>
-        <div class="btn-group" role="group" aria-label="Basic example">
-            <div *ngFor="let item of informatica">
-                <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="selectedActivity(item)">{{item.nombre}}</a>
+    <div style="background-color:#C844E0; height: 150px;">
+        <div class="activity text-center" style="color: white;">
+            <h4 class="text-title-areatext-center" style="margin-bottom:15px;">Informática</h4>        
+        </div>
+    </div>
+    <br>
+
+    <embed src="https://sinc.unl.edu.ar/recorrido/informatica/app-files/index.html" class="recorrido">
+    <div class="buttons">
+        <br>
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <div *ngFor="let item of informatica">
+                    <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="selectedActivity(item)">{{item.nombre}}</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<br>
+    <br>
 
 <div *ngIf="!jugar">
     <div *ngIf="activitySelected != null" class="col-12" style="padding: 0px;">
@@ -46,7 +54,7 @@
             </div>
         </div> 
         <div class="text-center" *ngIf="activitySelected?.nombre === 'Alumna ejemplar'">
-            <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="play()">A Jugar...</a>
+            <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="navigate()">A Jugar...</a>
         </div>
     </div>
 </div>
@@ -56,8 +64,15 @@
             <app-recon></app-recon>
         </div>
         <div class="text-center" *ngIf="activitySelected?.nombre === 'Alumna ejemplar'">
-            <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="play()">Volver...</a>
+            <a class="btn btn-primary button-shadow" style="background: #C844E0; border: none;" (click)="navigate()">Volver...</a>
         </div>
+</div>
+<br>
+<div  *ngIf="activitySelected?.pdf != null" class="text-center">
+    <br>
+    <h4 class="text-title" style="color:#434343;">Instrucciones</h4>
+    <br>
+    <iframe [src]="pdfUrl" width="860" height="640" type="application/pdf"></iframe>        
 </div>
 
 

@@ -1,3 +1,5 @@
+import { StringMap } from "@angular/compiler/src/compiler_facade_interface";
+
 export interface actividad{
     nombre?: string,
     videoUrl?: string,
@@ -11,4 +13,5 @@ export interface actividad{
     height?: string,
     script?: string,
     img?: string[],
+    pdf?: string;
 }
