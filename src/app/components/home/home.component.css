@@ -7,4 +7,14 @@
     color: #369FF6;
     font-family: "Poppins-black";
 }
+.recorrido{
+    width: 1024px;
+    height: 640px;
+}
 
+@media screen and (max-width: 600px) { 
+    .recorrido { 
+        width: 340px;
+        height: 213px;
+    }
+}

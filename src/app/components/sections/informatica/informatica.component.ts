@@ -13,6 +13,7 @@ export class InformaticaComponent implements OnInit {
   activitySelected?: actividad;
   url: string = "";
   urlSafe: SafeResourceUrl = "";
+  videoUrl: SafeResourceUrl = "";
 
   constructor(public sanitizer: DomSanitizer) {
    }
@@ -32,6 +33,9 @@ export class InformaticaComponent implements OnInit {
     if(this.activitySelected.url != null){
       this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.url);
     }
-  }
+    if (this.activitySelected.videoUrl != null){
+      this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.videoUrl);
+    }
+  } 
 
 }

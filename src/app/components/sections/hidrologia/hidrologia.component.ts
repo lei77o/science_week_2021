@@ -13,6 +13,7 @@ export class HidrologiaComponent implements OnInit {
   activitySelected?: actividad;
   url: string = "";
   urlSafe: SafeResourceUrl = "";
+  videoUrl: SafeResourceUrl = "";
 
   constructor(public sanitizer:DomSanitizer) { }
 
@@ -22,9 +23,11 @@ export class HidrologiaComponent implements OnInit {
       url: "https://wordwall.net/es/embed/851d1da115d84e71b01d0bbe744affe2?themeId=45&templateId=72",
       width: "500px",
       height: "380px",
+      videoUrl: "https://www.youtube.com/embed/4W-d-I5LMzI",
     });
     this.hidrica.push({
-      nombre: "La movida del agua"
+      nombre: "La movida del agua",
+      videoUrl: "https://www.youtube.com/embed/6meUBwZsPx0", 
     });
     this.hidrica.push({
       nombre: "¡Qué tiempo loco!",
@@ -37,6 +40,9 @@ export class HidrologiaComponent implements OnInit {
     this.activitySelected = event;
     if(this.activitySelected.url != null){
       this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.url);
+    }
+    if (this.activitySelected.videoUrl != null){
+      this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.videoUrl);
     }
   }
 

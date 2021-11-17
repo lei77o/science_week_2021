@@ -14,6 +14,7 @@ export class AgrimensuraComponent implements OnInit {
   url: string = "";
   urlSafe: SafeResourceUrl = "";
   aux: string [] = [];
+  videoUrl: SafeResourceUrl = "";
 
   constructor(public sanitizer:DomSanitizer) { }
 
@@ -38,6 +39,9 @@ export class AgrimensuraComponent implements OnInit {
     this.activitySelected = event;
     if(this.activitySelected.url != null){
       this.urlSafe = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.url);
+    }
+    if (this.activitySelected.videoUrl != null){
+      this.videoUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.activitySelected.videoUrl);
     }
   }
 

@@ -1,16 +1,12 @@
-<div class="container" *ngIf="activitySelected == null">
-    <div class="col-12">
-        <div style="width:100%; height: 640px;  background-color: darkgray;">
-        vista 360</div>
-    </div>
-
+<div class="col-12 text-center" *ngIf="activitySelected == null" style="padding: 0px; margin: 0px;">
+    <embed src="https://sinc.unl.edu.ar/recorrido/informatica/app-files/index.html" class="recorrido">
 <div class="buttons">
-<div class="btn-group" role="group" aria-label="Basic example">
-    <div *ngFor="let item of informatica">
-        <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <div *ngFor="let item of informatica">
+                <button type="button" class="btn btn-outline-primary" (click)="selectedActivity(item)">{{item.nombre}}</button>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
 </div>
 
 <div *ngIf="activitySelected != null" class="col-12" style="padding: 0px;">
@@ -22,6 +18,12 @@
     </div>
     <br/>
 
+    <div *ngIf="activitySelected?.videoUrl != null">
+        <div class="col-12 text-center" style="padding: 0px;">
+             <iframe [src]="videoUrl" class="videos" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <br>
     <div class="col-12 text-any">
         <div *ngIf="activitySelected?.texto1 != null">
             <p> {{activitySelected?.texto1}}</p>

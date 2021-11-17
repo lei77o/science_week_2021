@@ -12,3 +12,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
     }
+
+    .recorrido{
+        width: 1024px;
+        height: 640px;
+    }
+
+.videos{
+    width: 700px;
+    height: 500px;
+}    
+    
+@media screen and (max-width: 600px) { 
+    .recorrido { 
+        width: 340px;
+        height: 213px;
+    }
+    .videos{
+        width: 350px;
+        height: 250px;
+        padding: 0px;
+    }  
+}
