@@ -12,6 +12,7 @@ import { InformaticaComponent } from './components/sections/informatica/informat
 import { HidrologiaComponent } from './components/sections/hidrologia/hidrologia.component';
 import { AmbientalComponent } from './components/sections/ambiental/ambiental.component';
 import { AgrimensuraComponent } from './components/sections/agrimensura/agrimensura.component';
+import { AppReconComponent } from './components/sections/informatica/app-recon/app-recon.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { AgrimensuraComponent } from './components/sections/agrimensura/agrimens
     InformaticaComponent,
     HidrologiaComponent,
     AmbientalComponent,
-    AgrimensuraComponent
+    AgrimensuraComponent,
+    AppReconComponent
   ],
   imports: [
     BrowserModule,

@@ -14,8 +14,8 @@
     <div style="background-color:#2395E2; height: 150px;">
         <div class="activity text-center" style="color: white;">
             <h3 class="text-title-area">{{activitySelected?.nombre}}</h3>
-            <h4 class="text-center">Recursos Hídricos</h4>
-            <a href="hidricas" style="color: #34495E;" class="text-any"><i class="fa fa-undo"></i> Volver a las actividades...</a>
+            <h4 class="text-center" style="margin-bottom:15px;">Recursos Hídricos</h4>
+            <a href="hidricas" style="color:white;" class="text-any"><i class="fa fa-undo"></i> Volver a las actividades...</a>
         </div>
     </div>
     <br/>
@@ -38,6 +38,7 @@
         </div>
     </div>
 </div>
+
 <div *ngIf="activitySelected?.url != null">
     <div class="col-12 text-center">
          <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>

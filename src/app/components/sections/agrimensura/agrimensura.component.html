@@ -16,8 +16,8 @@
     <div style="background-color:#FFC501; height: 150px;">
         <div class="activity text-center" style="color: white;">
             <h3 class="text-title-area text-center">{{activitySelected?.nombre}}</h3>
-            <h4 class="text-center">Cartografía y Agrimensura</h4>
-            <a href="agrimensura" style="color: #34495E;" class="text-any"><i class="fa fa-undo"></i> Volver a las actividades...</a>
+            <h4 class="text-center" style="margin-bottom:15px;">Cartografía y Agrimensura</h4>
+            <a href="agrimensura" style="color: white;" class="text-any"><i class="fa fa-undo"></i> Volver a las actividades...</a>
         </div>
     </div>
     <br/>
@@ -28,6 +28,12 @@
         </div>
     </div> 
 
+    <br>
+    <div *ngIf="activitySelected?.img != null;" class="text-center">      
+        <div *ngFor="let img of activitySelected?.img;  let i = index;" style="margin: 10px;">
+                <img [src]="img" style="width: 50%;">      
+        </div>
+    </div>
     <br>
 
     <div class="col-12 text-any text-center" style="padding-right: 2rem; padding-left: 2rem;">
@@ -41,11 +47,7 @@
         </div>
     </div>
 
-    <div *ngIf="activitySelected?.img != null;" class="text-center">      
-        <div *ngFor="let img of activitySelected?.img;  let i = index;" style="margin: 10px;">
-                <img [src]="img" style="width: 50%;">      
-        </div>
-    </div>
+
     <br>
     <div *ngIf="activitySelected?.url != null">
         <div class="col-12 text-center">
