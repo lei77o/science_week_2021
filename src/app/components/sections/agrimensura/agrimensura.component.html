@@ -10,7 +10,7 @@
         </div>
     </div>
     <br>
-    <embed src="https://sinc.unl.edu.ar/recorrido/medio_ambiente/app-files/index.html" class="recorrido">
+    <embed src="./assets/images/agrimensura/agrimensura_80.jpg" class="recorrido">
 <br>
 <div class="buttons">
     <br>
@@ -41,7 +41,7 @@
     <br>
     <div *ngIf="activitySelected?.img != null;" class="text-center">      
         <div *ngFor="let img of activitySelected?.img;  let i = index;" style="margin: 10px;">
-                <img [src]="img" style="width: 50%;">      
+                <img [src]="img" style="width: 100%;">      
         </div>
     </div>
     <br>
@@ -61,7 +61,7 @@
     <br>
     <div *ngIf="activitySelected?.url != null">
         <div class="col-12 text-center">
-             <iframe [src]="urlSafe" width="700" height="500" frameborder="0" allowfullscreen></iframe>
+             <iframe [src]="urlSafe" class="actividad" frameborder="0" allowfullscreen></iframe>
         </div>
     </div> 
 </div>

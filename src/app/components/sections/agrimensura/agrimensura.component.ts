@@ -20,8 +20,7 @@ export class AgrimensuraComponent implements OnInit {
   constructor(public sanitizer:DomSanitizer) { }
 
   ngOnInit(): void {
-    this.aux.push("./assets/images/agrimensura/2.jpg");
-    this.aux.push("./assets/images/agrimensura/9.jpg");
+    this.aux.push("./assets/images/agrimensura/combinada.png");
     this.agrimensura.push({
       nombre: "¡ALTA pic!",
       titulo1:"¿Que es un Ortomosaico?",
@@ -35,7 +34,7 @@ export class AgrimensuraComponent implements OnInit {
       titulo1: "Fotografías aéreas",
       texto1: "Son imágenes tomadas desde el aire, a varios metros de altura, con cámaras montadas sobre el piso de un avión, en ellas vemos el paisaje como lo haría un ave en vuelo. Con la planificación de un “vuelo fotogramétrico”, se sobrevuela una zona determinada, obteniendo así varias fotografías seguidas y con cierta superposición. Son muy utilizadas para la cartografía del país, creación de mapas, geología, arqueología, estudios ambientales, de deforestación, crecimiento demográfico, de agricultura, etc. Ya que sobre ellas extraemos muchísima información además de poder realizar distintas mediciones.",
       texto2: "Conocer qué son las fotos aéreas y marcar diferencias entre ellas.",
-      url: "https://www.jigsawplanet.com/?rc=play&amp;pid=116e2c8f038f&amp;view=iframe&amp;"
+      url: "https://www.jigsawplanet.com/?rc=play&pid=116e2c8f038f&view=iframe&"
 
     });
 

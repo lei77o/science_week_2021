@@ -28,6 +28,12 @@
     width: 700px;
     height: 500px;
 }    
+
+    
+.actividad{
+    width:700px;
+    height:500px;
+}
     
 @media screen and (max-width: 600px) { 
     .recorrido { 
@@ -39,6 +45,10 @@
         height: 250px;
         padding: 0px;
     }  
+    .actividad{
+        width: 340px;
+        height: 213px;
+    }
 }
 
 .btn:hover{
