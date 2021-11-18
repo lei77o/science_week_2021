@@ -22,7 +22,7 @@ export class AgrimensuraComponent implements OnInit {
   ngOnInit(): void {
     this.aux.push("./assets/images/agrimensura/combinada.png");
     this.agrimensura.push({
-      nombre: "¡ALTA pic!",
+      nombre: "¡A jugar en la reserva!",
       titulo1:"¿Que es un Ortomosaico?",
       texto1: "Es una colección de fotografías aéreas (desde un avión o desde un drone) unidas y corregidas, formando un gran paisaje llamado mosaico. Son muy utilizados en cartografías temáticas, mapeos, minería, agricultura, planificación territorial, catastro, estudios ambientales, seguimiento de construcciones, etc.",
       texto2:"Conocer qué son las fotos aéreas y marcar diferencias entre ellas.",
@@ -30,7 +30,7 @@ export class AgrimensuraComponent implements OnInit {
       img: this.aux,
     });
     this.agrimensura.push({
-      nombre: "¡A jugar en la reserva!",
+      nombre: "¡ALTA pic!",
       titulo1: "Fotografías aéreas",
       texto1: "Son imágenes tomadas desde el aire, a varios metros de altura, con cámaras montadas sobre el piso de un avión, en ellas vemos el paisaje como lo haría un ave en vuelo. Con la planificación de un “vuelo fotogramétrico”, se sobrevuela una zona determinada, obteniendo así varias fotografías seguidas y con cierta superposición. Son muy utilizadas para la cartografía del país, creación de mapas, geología, arqueología, estudios ambientales, de deforestación, crecimiento demográfico, de agricultura, etc. Ya que sobre ellas extraemos muchísima información además de poder realizar distintas mediciones.",
       texto2: "Por medio de un rompecabezas les presentamos un Ortomosaico  de la Reserva Ecológica de la Ciudad Universitaria. El Ortomosaico se realizó con fotografías tomadas desde un DRONE Phantom 4.",
